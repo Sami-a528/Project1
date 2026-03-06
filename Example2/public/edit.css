@@ -1,0 +1,10 @@
+h1{
+    color: maroon;
+}
+
+button{
+    background-color: blue;
+    height: 30px;
+    width: 150px;
+    border-radius: 10px;
+}

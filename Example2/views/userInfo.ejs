@@ -3,42 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All User Info</title>
+    <title>All Info</title>
     <style>
-        table,th,td{
+        table, th, td{
             border: 1px solid black;
         }
     </style>
 </head>
 <body>
+    <h1>All Information About Users</h1>
     <table>
         <tr>
             <th>Id</th>
+            <th>Username</th>
             <th>Email</th>
-            <th>UserName</th>
-            <th>PassWord</th>
+            <th>Password</th>
+            <th colspan="2">
+                <form method="get" action="/user/new">
+                    <button>Add New User</button>
+                </form>
+            </th>
         </tr>
         <% for(user of users){ %>
             <tr>
                 <td> <%= user.id %></td>
-                <td> <%= user.email %></td>
                 <td> <%= user.username %></td>
+                <td> <%= user.email %></td>
                 <td> <%= user.password %></td>
+
                 <td>
-                    <form method="get" action="/user/<%= user.id %>/edit">
-                        <button>Edit UserName</button>
+                    <form method="get" action="/user/<%= user.id%>/edit">
+                        <button>Edit Username</button>
                     </form>
                 </td>
 
                 <td>
-                    <form method="get" action="/user/<%=user.id%>/delete">
+                    <form method="get" action="/user/<%= user.id%>/delete">
                         <button>Delete</button>
-                    </form>
-                </td>
-
-                <td>
-                    <form method="get" action="/user/new">
-                        <button>Add New</button>
                     </form>
                 </td>
             </tr>

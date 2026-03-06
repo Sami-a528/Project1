@@ -1,5 +1,5 @@
 {
-  "name": "backendsql",
+  "name": "example2",
   "version": "1.0.0",
   "description": "",
   "license": "ISC",
@@ -9,15 +9,14 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "devDependencies": {
-    "@faker-js/faker": "^9.9.0"
-  },
   "dependencies": {
     "ejs": "^3.1.10",
     "express": "^5.1.0",
-    "init": "^0.1.2",
     "method-override": "^3.0.0",
     "mysql2": "^3.14.2",
     "uuid": "^11.1.0"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^9.9.0"
   }
 }
